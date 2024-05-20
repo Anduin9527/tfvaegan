@@ -71,10 +71,10 @@ class DATA_LOADER(object):
                 self.test_seen_label = torch.from_numpy(label[test_seen_loc]).long()
                 # Scaled and transformed (0,1) attributes
                 self.bce_att = opt.bce_att
-                if opt.orig_att_for_bce:
-                    temp_att = torch.from_numpy(scaler_att.fit_transform(orig_att)).float()
-                else:
-                    temp_att = torch.from_numpy(scaler_att.fit_transform(self.attribute)).float()
+#                if opt.orig_att_for_bce:
+#                    temp_att = torch.from_numpy(scaler_att.fit_transform(orig_att)).float()
+#                else:
+                temp_att = torch.from_numpy(scaler_att.fit_transform(self.attribute)).float()
                 #mx_att = temp_att.max()
                 temp_att.mul_(1/mx)
                 self.bce_attribute = temp_att

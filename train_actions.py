@@ -8,6 +8,8 @@ from torch.autograd import Variable
 import numpy as np
 import random
 # load files
+import sys
+sys.path.append('./')
 import networks.TFVAEGAN_model as model
 import datasets.action_util as util
 import classifiers.classifier_actions as classifier
@@ -149,8 +151,8 @@ def calc_gradient_penalty(netD,real_data, fake_data, input_att):
     return gradient_penalty
 
 best_zsl_acc = 0
-if opt.gzsl:
-    best_gzsl_acc = 0
+# if opt.gzsl:
+#     best_gzsl_acc = 0
 
 #Training loop
 for epoch in range(0,opt.nepoch):

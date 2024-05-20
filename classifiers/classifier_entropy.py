@@ -5,7 +5,7 @@ from torch.autograd import Variable
 import torch.optim as optim
 import torch.nn.functional as F
 import numpy as np
-import util
+import datasets.action_util as util
 
 class CLASSIFIER:
     def __init__(self, _train_X, _train_Y, data_loader, _nclass, syn_feature, syn_label, _cuda, seen_classifier, unseen_classifier, _lr=0.001, _beta1=0.5, _nepoch=50, _batch_size=100, _hidden_size=512, netDec=None, dec_size=4096, dec_hidden_size=4096):
