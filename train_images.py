@@ -262,7 +262,10 @@ for epoch in range(0,opt.nepoch):
     netG.eval()
     netDec.eval()
     netF.eval()
-    syn_feature, syn_label = generate_syn_feature(netG,data.unseenclasses, data.attribute, opt.syn_num,netF=netF,netDec=netDec)
+    if opt.a1 == 0:
+        syn_feature, syn_label = generate_syn_feature(netG,data.unseenclasses, data.attribute, opt.syn_num,netF=None,netDec=None) ##
+    else: 
+        syn_feature, syn_label = generate_syn_feature(netG,data.unseenclasses, data.attribute, opt.syn_num,netF=netF,netDec=netDec) ##
     # Generalized zero-shot learning
     if opt.gzsl:   
         # Concatenate real seen features with synthesized unseen features
@@ -270,17 +273,26 @@ for epoch in range(0,opt.nepoch):
         train_Y = torch.cat((data.train_label, syn_label), 0)
         nclass = opt.nclass_all
         # Train GZSL classifier
-        gzsl_cls = classifier.CLASSIFIER(train_X, train_Y, data, nclass, opt.cuda, opt.classifier_lr, 0.5, \
-                25, opt.syn_num, generalized=True, netDec=netDec, dec_size=opt.attSize, dec_hidden_size=4096)
+        if opt.a1 == 0:
+            gzsl_cls = classifier.CLASSIFIER(train_X, train_Y, data, nclass, opt.cuda, opt.classifier_lr, 0.5, \
+                    25, opt.syn_num, generalized=True, netDec=None, dec_size=opt.attSize, dec_hidden_size=4096)
+        else:
+            gzsl_cls = classifier.CLASSIFIER(train_X, train_Y, data, nclass, opt.cuda, opt.classifier_lr, 0.5, \
+                    25, opt.syn_num, generalized=True, netDec=netDec, dec_size=opt.attSize, dec_hidden_size=4096)
         if best_gzsl_acc < gzsl_cls.H:
             best_acc_seen, best_acc_unseen, best_gzsl_acc = gzsl_cls.acc_seen, gzsl_cls.acc_unseen, gzsl_cls.H
         print('GZSL: seen=%.4f, unseen=%.4f, h=%.4f' % (gzsl_cls.acc_seen, gzsl_cls.acc_unseen, gzsl_cls.H),end=" ")
 
     # Zero-shot learning
     # Train ZSL classifier
-    zsl_cls = classifier.CLASSIFIER(syn_feature, util.map_label(syn_label, data.unseenclasses), \
+    if opt.a1 == 0:
+       zsl_cls = classifier.CLASSIFIER(syn_feature, util.map_label(syn_label, data.unseenclasses), \
                     data, data.unseenclasses.size(0), opt.cuda, opt.classifier_lr, 0.5, 25, opt.syn_num, \
-                    generalized=False, netDec=netDec, dec_size=opt.attSize, dec_hidden_size=4096)
+                    generalized=False, netDec=None, dec_size=opt.attSize, dec_hidden_size=4096)
+    else:
+         zsl_cls = classifier.CLASSIFIER(syn_feature, util.map_label(syn_label, data.unseenclasses), \
+                      data, data.unseenclasses.size(0), opt.cuda, opt.classifier_lr, 0.5, 25, opt.syn_num, \
+                      generalized=False, netDec=netDec, dec_size=opt.attSize, dec_hidden_size=4096)
     acc = zsl_cls.acc
     if best_zsl_acc < acc:
         best_zsl_acc = acc

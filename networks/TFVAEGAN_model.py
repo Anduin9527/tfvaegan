@@ -65,7 +65,7 @@ class Generator(nn.Module):
         else:
             z = torch.cat((z, c), dim=-1)
             x1 = self.lrelu(self.fc1(z))
-            feedback_out = x1 + a1*feedback_layers
+            feedback_out = x1 + a1*feedback_layers ## 令a1=0 忽略Feedback
             x = self.sigmoid(self.fc3(feedback_out))
             return x
 
