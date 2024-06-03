@@ -1,0 +1,336 @@
+Random Seed:  3407
+# of training samples:  538
+Encoder(
+  (fc1): Linear(in_features=1536, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=1024, bias=True)
+  (lrelu): LeakyReLU(0.2, inplace)
+  (linear_means): Linear(in_features=1024, out_features=512, bias=True)
+  (linear_log_var): Linear(in_features=1024, out_features=512, bias=True)
+)
+Generator(
+  (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=1024, bias=True)
+  (lrelu): LeakyReLU(0.2, inplace)
+  (sigmoid): Sigmoid()
+)
+Discriminator_D1(
+  (fc1): Linear(in_features=1536, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=1, bias=True)
+  (lrelu): LeakyReLU(0.2, inplace)
+)
+Feedback(
+  (fc1): Linear(in_features=4096, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=4096, bias=True)
+  (lrelu): LeakyReLU(0.2, inplace)
+)
+AttDec(
+  (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=512, bias=True)
+  (lrelu): LeakyReLU(0.2, inplace)
+)
+[0/300]  Loss_D: -102.8465 Loss_G: 1.6043, Wasserstein_dist:128.5808, vae_loss_seen:482.6990 GZSL: seen=0.9251, unseen=0.1615, h=0.2749 ZSL: unseen accuracy=0.3333
+[1/300]  Loss_D: -93.9869 Loss_G: -0.8816, Wasserstein_dist:127.0555, vae_loss_seen:445.7846 GZSL: seen=0.9653, unseen=0.0469, h=0.0894 ZSL: unseen accuracy=0.4583
+[2/300]  Loss_D: -46.3897 Loss_G: -4.8401, Wasserstein_dist:60.6810, vae_loss_seen:364.6920 GZSL: seen=0.9676, unseen=0.1667, h=0.2844 ZSL: unseen accuracy=0.5469
+[3/300]  Loss_D: -26.7807 Loss_G: -6.2071, Wasserstein_dist:34.8044, vae_loss_seen:329.5887 GZSL: seen=0.9607, unseen=0.1667, h=0.2841 ZSL: unseen accuracy=0.4375
+[4/300]  Loss_D: -21.2193 Loss_G: -6.9980, Wasserstein_dist:26.6829, vae_loss_seen:327.1929 GZSL: seen=0.9660, unseen=0.1667, h=0.2843 ZSL: unseen accuracy=0.4740
+[5/300]  Loss_D: -18.8224 Loss_G: -6.8682, Wasserstein_dist:23.2228, vae_loss_seen:322.7771 GZSL: seen=0.8521, unseen=0.0521, h=0.0982 ZSL: unseen accuracy=0.4167
+[6/300]  Loss_D: -18.1536 Loss_G: -6.7745, Wasserstein_dist:22.2145, vae_loss_seen:319.4175 GZSL: seen=0.9755, unseen=0.1667, h=0.2847 ZSL: unseen accuracy=0.4896
+[7/300]  Loss_D: -17.2756 Loss_G: -6.1264, Wasserstein_dist:21.4814, vae_loss_seen:320.0570 GZSL: seen=0.8981, unseen=0.0417, h=0.0796 ZSL: unseen accuracy=0.5833
+[8/300]  Loss_D: -19.8116 Loss_G: -4.3321, Wasserstein_dist:24.2883, vae_loss_seen:328.4144 GZSL: seen=0.9660, unseen=0.0625, h=0.1174 ZSL: unseen accuracy=0.3490
+[9/300]  Loss_D: -21.3136 Loss_G: -2.8627, Wasserstein_dist:25.4207, vae_loss_seen:322.5544 GZSL: seen=0.9296, unseen=0.0521, h=0.0986 ZSL: unseen accuracy=0.5885
+[10/300]  Loss_D: -23.6145 Loss_G: -0.3176, Wasserstein_dist:28.6333, vae_loss_seen:320.0030 GZSL: seen=0.8608, unseen=0.0365, h=0.0700 ZSL: unseen accuracy=0.4740
+[11/300]  Loss_D: -22.0576 Loss_G: 2.5728, Wasserstein_dist:27.3083, vae_loss_seen:330.8800 GZSL: seen=0.8817, unseen=0.0781, h=0.1435 ZSL: unseen accuracy=0.3333
+[12/300]  Loss_D: -20.7530 Loss_G: 3.9761, Wasserstein_dist:26.7948, vae_loss_seen:321.7052 GZSL: seen=0.9660, unseen=0.0052, h=0.0104 ZSL: unseen accuracy=0.4740
+[13/300]  Loss_D: -24.1077 Loss_G: 4.4672, Wasserstein_dist:29.9189, vae_loss_seen:314.6785 GZSL: seen=0.8824, unseen=0.0781, h=0.1435 ZSL: unseen accuracy=0.4792
+[14/300]  Loss_D: -24.8732 Loss_G: 5.1171, Wasserstein_dist:30.9672, vae_loss_seen:319.7590 GZSL: seen=0.9151, unseen=0.0677, h=0.1261 ZSL: unseen accuracy=0.6250
+[15/300]  Loss_D: -22.9420 Loss_G: 6.1253, Wasserstein_dist:28.2439, vae_loss_seen:319.9233 GZSL: seen=0.8433, unseen=0.1302, h=0.2256 ZSL: unseen accuracy=0.3333
+[16/300]  Loss_D: -22.8434 Loss_G: 6.3942, Wasserstein_dist:28.2697, vae_loss_seen:314.7856 GZSL: seen=0.8188, unseen=0.1406, h=0.2400 ZSL: unseen accuracy=0.4740
+[17/300]  Loss_D: -23.4560 Loss_G: 6.6198, Wasserstein_dist:29.4279, vae_loss_seen:315.2738 GZSL: seen=0.8390, unseen=0.1250, h=0.2176 ZSL: unseen accuracy=0.4740
+[18/300]  Loss_D: -21.6582 Loss_G: 7.0179, Wasserstein_dist:27.4594, vae_loss_seen:322.0292 GZSL: seen=0.8731, unseen=0.0521, h=0.0983 ZSL: unseen accuracy=0.4740
+[19/300]  Loss_D: -21.1054 Loss_G: 7.7328, Wasserstein_dist:26.9742, vae_loss_seen:313.0382 GZSL: seen=0.9345, unseen=0.0781, h=0.1442 ZSL: unseen accuracy=0.4115
+[20/300]  Loss_D: -21.5677 Loss_G: 9.1122, Wasserstein_dist:26.5982, vae_loss_seen:316.2459 GZSL: seen=0.7944, unseen=0.1302, h=0.2237 ZSL: unseen accuracy=0.4427
+[21/300]  Loss_D: -20.0997 Loss_G: 8.5541, Wasserstein_dist:25.7198, vae_loss_seen:320.4839 GZSL: seen=0.7967, unseen=0.1354, h=0.2315 ZSL: unseen accuracy=0.4740
+[22/300]  Loss_D: -19.5505 Loss_G: 8.2015, Wasserstein_dist:24.4735, vae_loss_seen:313.0517 GZSL: seen=0.8439, unseen=0.1354, h=0.2334 ZSL: unseen accuracy=0.4792
+[23/300]  Loss_D: -19.5802 Loss_G: 9.4516, Wasserstein_dist:24.9348, vae_loss_seen:314.1909 GZSL: seen=0.8402, unseen=0.0781, h=0.1430 ZSL: unseen accuracy=0.4740
+[24/300]  Loss_D: -22.4515 Loss_G: 9.2853, Wasserstein_dist:27.7215, vae_loss_seen:317.6696 GZSL: seen=0.8905, unseen=0.0990, h=0.1781 ZSL: unseen accuracy=0.4740
+[25/300]  Loss_D: -18.7307 Loss_G: 11.2499, Wasserstein_dist:23.5106, vae_loss_seen:306.7012 GZSL: seen=0.8016, unseen=0.0781, h=0.1424 ZSL: unseen accuracy=0.4740
+[26/300]  Loss_D: -18.7308 Loss_G: 9.8248, Wasserstein_dist:24.3554, vae_loss_seen:311.3381 GZSL: seen=0.7557, unseen=0.0885, h=0.1585 ZSL: unseen accuracy=0.4740
+[27/300]  Loss_D: -18.5351 Loss_G: 9.9780, Wasserstein_dist:22.9618, vae_loss_seen:310.6441 GZSL: seen=0.8922, unseen=0.0833, h=0.1524 ZSL: unseen accuracy=0.4740
+[28/300]  Loss_D: -17.3430 Loss_G: 11.7198, Wasserstein_dist:21.4933, vae_loss_seen:314.0020 GZSL: seen=0.9142, unseen=0.1042, h=0.1870 ZSL: unseen accuracy=0.4740
+[29/300]  Loss_D: -15.2992 Loss_G: 11.6862, Wasserstein_dist:20.0245, vae_loss_seen:317.1048 GZSL: seen=0.8263, unseen=0.0781, h=0.1428 ZSL: unseen accuracy=0.4062
+[30/300]  Loss_D: -16.6366 Loss_G: 12.4618, Wasserstein_dist:20.8486, vae_loss_seen:301.0657 GZSL: seen=0.7614, unseen=0.1250, h=0.2147 ZSL: unseen accuracy=0.4740
+[31/300]  Loss_D: -18.1789 Loss_G: 11.7972, Wasserstein_dist:22.1158, vae_loss_seen:310.2437 GZSL: seen=0.9056, unseen=0.0990, h=0.1784 ZSL: unseen accuracy=0.3073
+[32/300]  Loss_D: -14.1381 Loss_G: 13.8916, Wasserstein_dist:18.1072, vae_loss_seen:318.6553 GZSL: seen=0.8354, unseen=0.1406, h=0.2407 ZSL: unseen accuracy=0.4740
+[33/300]  Loss_D: -15.1092 Loss_G: 14.6998, Wasserstein_dist:19.6950, vae_loss_seen:320.6932 GZSL: seen=0.9554, unseen=0.0573, h=0.1081 ZSL: unseen accuracy=0.3385
+[34/300]  Loss_D: -14.6990 Loss_G: 12.7810, Wasserstein_dist:18.5430, vae_loss_seen:312.8064 GZSL: seen=0.9382, unseen=0.0521, h=0.0987 ZSL: unseen accuracy=0.4740
+[35/300]  Loss_D: -15.3841 Loss_G: 13.0432, Wasserstein_dist:19.4376, vae_loss_seen:312.8618 GZSL: seen=0.8860, unseen=0.0625, h=0.1168 ZSL: unseen accuracy=0.3125
+[36/300]  Loss_D: -14.3136 Loss_G: 12.6005, Wasserstein_dist:18.2122, vae_loss_seen:301.8173 GZSL: seen=0.8589, unseen=0.0833, h=0.1519 ZSL: unseen accuracy=0.2969
+[37/300]  Loss_D: -15.9688 Loss_G: 11.8882, Wasserstein_dist:20.1793, vae_loss_seen:314.2401 GZSL: seen=0.7901, unseen=0.0781, h=0.1422 ZSL: unseen accuracy=0.4010
+[38/300]  Loss_D: -12.2790 Loss_G: 14.0298, Wasserstein_dist:15.5824, vae_loss_seen:298.1547 GZSL: seen=0.8843, unseen=0.0990, h=0.1780 ZSL: unseen accuracy=0.4219
+[39/300]  Loss_D: -12.3838 Loss_G: 14.2456, Wasserstein_dist:15.8708, vae_loss_seen:309.6870 GZSL: seen=0.8890, unseen=0.0781, h=0.1436 ZSL: unseen accuracy=0.4479
+[40/300]  Loss_D: -11.7074 Loss_G: 13.4912, Wasserstein_dist:15.2142, vae_loss_seen:300.8902 GZSL: seen=0.8184, unseen=0.1042, h=0.1848 ZSL: unseen accuracy=0.3021
+[41/300]  Loss_D: -14.8576 Loss_G: 15.4314, Wasserstein_dist:18.8597, vae_loss_seen:305.6010 GZSL: seen=0.8922, unseen=0.1094, h=0.1949 ZSL: unseen accuracy=0.2708
+[42/300]  Loss_D: -12.0242 Loss_G: 14.1778, Wasserstein_dist:15.0441, vae_loss_seen:308.5311 GZSL: seen=0.8533, unseen=0.0729, h=0.1344 ZSL: unseen accuracy=0.3177
+[43/300]  Loss_D: -12.3107 Loss_G: 15.3369, Wasserstein_dist:15.6046, vae_loss_seen:305.9213 GZSL: seen=0.9601, unseen=0.0729, h=0.1355 ZSL: unseen accuracy=0.3125
+[44/300]  Loss_D: -12.6309 Loss_G: 15.7409, Wasserstein_dist:15.8971, vae_loss_seen:312.5648 GZSL: seen=0.8767, unseen=0.0573, h=0.1076 ZSL: unseen accuracy=0.2656
+[45/300]  Loss_D: -13.0333 Loss_G: 15.5311, Wasserstein_dist:16.2460, vae_loss_seen:315.3980 GZSL: seen=0.8628, unseen=0.1198, h=0.2104 ZSL: unseen accuracy=0.4167
+[46/300]  Loss_D: -11.9731 Loss_G: 15.2398, Wasserstein_dist:15.2682, vae_loss_seen:297.6833 GZSL: seen=0.8233, unseen=0.1198, h=0.2092 ZSL: unseen accuracy=0.4531
+[47/300]  Loss_D: -11.9526 Loss_G: 16.8364, Wasserstein_dist:14.8917, vae_loss_seen:304.3547 GZSL: seen=0.8873, unseen=0.0469, h=0.0890 ZSL: unseen accuracy=0.2969
+[48/300]  Loss_D: -9.7372 Loss_G: 17.2574, Wasserstein_dist:13.1226, vae_loss_seen:304.0356 GZSL: seen=0.8406, unseen=0.0729, h=0.1342 ZSL: unseen accuracy=0.3021
+[49/300]  Loss_D: -10.0254 Loss_G: 17.3582, Wasserstein_dist:13.1549, vae_loss_seen:302.2096 GZSL: seen=0.8536, unseen=0.0990, h=0.1774 ZSL: unseen accuracy=0.3906
+[50/300]  Loss_D: -11.8079 Loss_G: 17.6858, Wasserstein_dist:14.6707, vae_loss_seen:305.5180 GZSL: seen=0.9459, unseen=0.0677, h=0.1264 ZSL: unseen accuracy=0.3125
+[51/300]  Loss_D: -10.8422 Loss_G: 17.5619, Wasserstein_dist:14.2328, vae_loss_seen:307.9923 GZSL: seen=0.9208, unseen=0.1042, h=0.1872 ZSL: unseen accuracy=0.4427
+[52/300]  Loss_D: -12.2028 Loss_G: 17.8661, Wasserstein_dist:15.6993, vae_loss_seen:313.6584 GZSL: seen=0.9276, unseen=0.0625, h=0.1171 ZSL: unseen accuracy=0.4010
+[53/300]  Loss_D: -14.5855 Loss_G: 18.8481, Wasserstein_dist:17.5757, vae_loss_seen:301.6356 GZSL: seen=0.8437, unseen=0.1250, h=0.2177 ZSL: unseen accuracy=0.4062
+[54/300]  Loss_D: -10.4164 Loss_G: 18.7853, Wasserstein_dist:13.7647, vae_loss_seen:315.2668 GZSL: seen=0.8571, unseen=0.0625, h=0.1165 ZSL: unseen accuracy=0.2760
+[55/300]  Loss_D: -12.5825 Loss_G: 19.4143, Wasserstein_dist:16.1542, vae_loss_seen:310.2253 GZSL: seen=0.9250, unseen=0.0990, h=0.1788 ZSL: unseen accuracy=0.4271
+[56/300]  Loss_D: -10.9277 Loss_G: 19.9731, Wasserstein_dist:14.0764, vae_loss_seen:310.1422 GZSL: seen=0.9607, unseen=0.0625, h=0.1174 ZSL: unseen accuracy=0.4635
+[57/300]  Loss_D: -10.8659 Loss_G: 19.0289, Wasserstein_dist:13.6144, vae_loss_seen:299.9942 GZSL: seen=0.9565, unseen=0.0521, h=0.0988 ZSL: unseen accuracy=0.2760
+[58/300]  Loss_D: -12.5817 Loss_G: 19.6386, Wasserstein_dist:15.6974, vae_loss_seen:318.1075 GZSL: seen=0.8731, unseen=0.0677, h=0.1257 ZSL: unseen accuracy=0.2552
+[59/300]  Loss_D: -11.7902 Loss_G: 20.5204, Wasserstein_dist:14.8735, vae_loss_seen:310.1640 GZSL: seen=0.8874, unseen=0.1250, h=0.2191 ZSL: unseen accuracy=0.4219
+[60/300]  Loss_D: -12.2836 Loss_G: 19.9610, Wasserstein_dist:15.2790, vae_loss_seen:302.7936 GZSL: seen=0.9505, unseen=0.0990, h=0.1793 ZSL: unseen accuracy=0.4271
+[61/300]  Loss_D: -11.3986 Loss_G: 19.4101, Wasserstein_dist:14.7141, vae_loss_seen:308.7782 GZSL: seen=0.8132, unseen=0.1406, h=0.2398 ZSL: unseen accuracy=0.4531
+[62/300]  Loss_D: -12.7445 Loss_G: 19.9423, Wasserstein_dist:16.1496, vae_loss_seen:308.3986 GZSL: seen=0.8054, unseen=0.1094, h=0.1926 ZSL: unseen accuracy=0.4635
+[63/300]  Loss_D: -10.7153 Loss_G: 21.5106, Wasserstein_dist:13.4476, vae_loss_seen:310.3009 GZSL: seen=0.8835, unseen=0.0729, h=0.1347 ZSL: unseen accuracy=0.4427
+[64/300]  Loss_D: -10.6584 Loss_G: 21.4443, Wasserstein_dist:13.8221, vae_loss_seen:310.0292 GZSL: seen=0.9601, unseen=0.0833, h=0.1534 ZSL: unseen accuracy=0.3490
+[65/300]  Loss_D: -10.4236 Loss_G: 21.0354, Wasserstein_dist:14.3496, vae_loss_seen:299.6775 GZSL: seen=0.8991, unseen=0.0885, h=0.1612 ZSL: unseen accuracy=0.4531
+[66/300]  Loss_D: -9.8626 Loss_G: 21.1967, Wasserstein_dist:12.7537, vae_loss_seen:311.4202 GZSL: seen=0.9044, unseen=0.0833, h=0.1526 ZSL: unseen accuracy=0.2917
+[67/300]  Loss_D: -10.9346 Loss_G: 22.6921, Wasserstein_dist:14.4306, vae_loss_seen:307.8820 GZSL: seen=0.9017, unseen=0.0677, h=0.1260 ZSL: unseen accuracy=0.2604
+[68/300]  Loss_D: -11.9325 Loss_G: 21.7829, Wasserstein_dist:14.7884, vae_loss_seen:310.3989 GZSL: seen=0.8904, unseen=0.0521, h=0.0984 ZSL: unseen accuracy=0.3125
+[69/300]  Loss_D: -7.6865 Loss_G: 22.5494, Wasserstein_dist:10.5823, vae_loss_seen:304.7838 GZSL: seen=0.8179, unseen=0.1042, h=0.1848 ZSL: unseen accuracy=0.3073
+[70/300]  Loss_D: -11.8837 Loss_G: 22.5945, Wasserstein_dist:14.9731, vae_loss_seen:317.4533 GZSL: seen=0.8843, unseen=0.0781, h=0.1436 ZSL: unseen accuracy=0.2708
+[71/300]  Loss_D: -10.9245 Loss_G: 23.8357, Wasserstein_dist:14.0927, vae_loss_seen:304.6720 GZSL: seen=0.8373, unseen=0.1198, h=0.2096 ZSL: unseen accuracy=0.3229
+[72/300]  Loss_D: -12.4082 Loss_G: 23.3007, Wasserstein_dist:15.4259, vae_loss_seen:313.6101 GZSL: seen=0.9148, unseen=0.1042, h=0.1870 ZSL: unseen accuracy=0.3646
+[73/300]  Loss_D: -10.5608 Loss_G: 22.7594, Wasserstein_dist:13.9950, vae_loss_seen:308.2022 GZSL: seen=0.8917, unseen=0.1250, h=0.2193 ZSL: unseen accuracy=0.3802
+[74/300]  Loss_D: -11.8676 Loss_G: 22.7274, Wasserstein_dist:15.0015, vae_loss_seen:308.8102 GZSL: seen=0.9446, unseen=0.0885, h=0.1619 ZSL: unseen accuracy=0.2969
+[75/300]  Loss_D: -10.1819 Loss_G: 23.5376, Wasserstein_dist:13.6041, vae_loss_seen:305.4290 GZSL: seen=0.8981, unseen=0.0938, h=0.1698 ZSL: unseen accuracy=0.2865
+[76/300]  Loss_D: -11.0000 Loss_G: 23.5752, Wasserstein_dist:13.9176, vae_loss_seen:301.6340 GZSL: seen=0.8774, unseen=0.1250, h=0.2188 ZSL: unseen accuracy=0.1615
+[77/300]  Loss_D: -11.5121 Loss_G: 23.1477, Wasserstein_dist:14.6567, vae_loss_seen:307.2637 GZSL: seen=0.9380, unseen=0.0781, h=0.1442 ZSL: unseen accuracy=0.2812
+[78/300]  Loss_D: -11.4790 Loss_G: 23.8442, Wasserstein_dist:14.4317, vae_loss_seen:304.3271 GZSL: seen=0.9124, unseen=0.1094, h=0.1953 ZSL: unseen accuracy=0.4219
+[79/300]  Loss_D: -8.5588 Loss_G: 24.2440, Wasserstein_dist:11.5995, vae_loss_seen:309.5026 GZSL: seen=0.8890, unseen=0.1250, h=0.2192 ZSL: unseen accuracy=0.3021
+[80/300]  Loss_D: -11.1602 Loss_G: 23.6685, Wasserstein_dist:14.3932, vae_loss_seen:298.5343 GZSL: seen=0.9554, unseen=0.0573, h=0.1081 ZSL: unseen accuracy=0.4323
+[81/300]  Loss_D: -10.8622 Loss_G: 24.1472, Wasserstein_dist:13.8997, vae_loss_seen:302.8001 GZSL: seen=0.9073, unseen=0.0938, h=0.1699 ZSL: unseen accuracy=0.2865
+[82/300]  Loss_D: -11.8590 Loss_G: 23.4276, Wasserstein_dist:16.0655, vae_loss_seen:309.9200 GZSL: seen=0.8739, unseen=0.1250, h=0.2187 ZSL: unseen accuracy=0.2292
+[83/300]  Loss_D: -11.7646 Loss_G: 24.4851, Wasserstein_dist:15.1064, vae_loss_seen:300.5203 GZSL: seen=0.8985, unseen=0.0677, h=0.1259 ZSL: unseen accuracy=0.2552
+[84/300]  Loss_D: -10.2598 Loss_G: 24.0285, Wasserstein_dist:13.7094, vae_loss_seen:304.4193 GZSL: seen=0.9078, unseen=0.1146, h=0.2035 ZSL: unseen accuracy=0.2500
+[85/300]  Loss_D: -11.5444 Loss_G: 23.6620, Wasserstein_dist:14.8149, vae_loss_seen:310.5079 GZSL: seen=0.8741, unseen=0.1146, h=0.2026 ZSL: unseen accuracy=0.3021
+[86/300]  Loss_D: -9.9306 Loss_G: 24.7989, Wasserstein_dist:12.6426, vae_loss_seen:301.7082 GZSL: seen=0.8669, unseen=0.1094, h=0.1942 ZSL: unseen accuracy=0.1615
+[87/300]  Loss_D: -11.0864 Loss_G: 22.8189, Wasserstein_dist:14.9943, vae_loss_seen:306.2603 GZSL: seen=0.9197, unseen=0.0625, h=0.1170 ZSL: unseen accuracy=0.2135
+[88/300]  Loss_D: -10.5749 Loss_G: 23.5578, Wasserstein_dist:13.4190, vae_loss_seen:301.8668 GZSL: seen=0.9151, unseen=0.1042, h=0.1870 ZSL: unseen accuracy=0.1250
+[89/300]  Loss_D: -9.9122 Loss_G: 23.4137, Wasserstein_dist:12.8496, vae_loss_seen:301.3533 GZSL: seen=0.8275, unseen=0.1146, h=0.2013 ZSL: unseen accuracy=0.2865
+[90/300]  Loss_D: -9.8269 Loss_G: 24.1604, Wasserstein_dist:12.9307, vae_loss_seen:312.5452 GZSL: seen=0.8862, unseen=0.1094, h=0.1947 ZSL: unseen accuracy=0.2708
+[91/300]  Loss_D: -10.6960 Loss_G: 23.5753, Wasserstein_dist:13.5528, vae_loss_seen:302.0169 GZSL: seen=0.8536, unseen=0.0938, h=0.1689 ZSL: unseen accuracy=0.2604
+[92/300]  Loss_D: -8.9939 Loss_G: 25.1799, Wasserstein_dist:11.6712, vae_loss_seen:306.0287 GZSL: seen=0.9045, unseen=0.1146, h=0.2034 ZSL: unseen accuracy=0.2865
+[93/300]  Loss_D: -10.3948 Loss_G: 24.1239, Wasserstein_dist:13.5389, vae_loss_seen:315.9173 GZSL: seen=0.8946, unseen=0.1146, h=0.2031 ZSL: unseen accuracy=0.1771
+[94/300]  Loss_D: -8.5828 Loss_G: 24.0939, Wasserstein_dist:11.2773, vae_loss_seen:298.6804 GZSL: seen=0.8933, unseen=0.0625, h=0.1168 ZSL: unseen accuracy=0.1875
+[95/300]  Loss_D: -9.1313 Loss_G: 24.1930, Wasserstein_dist:11.9542, vae_loss_seen:297.9292 GZSL: seen=0.8728, unseen=0.1250, h=0.2187 ZSL: unseen accuracy=0.1875
+[96/300]  Loss_D: -9.5831 Loss_G: 22.9662, Wasserstein_dist:12.2390, vae_loss_seen:298.6815 GZSL: seen=0.8972, unseen=0.1042, h=0.1867 ZSL: unseen accuracy=0.3229
+[97/300]  Loss_D: -9.3640 Loss_G: 24.7212, Wasserstein_dist:12.1533, vae_loss_seen:307.6451 GZSL: seen=0.9505, unseen=0.1406, h=0.2450 ZSL: unseen accuracy=0.2760
+[98/300]  Loss_D: -9.1404 Loss_G: 24.0947, Wasserstein_dist:12.0770, vae_loss_seen:305.5381 GZSL: seen=0.9045, unseen=0.1094, h=0.1952 ZSL: unseen accuracy=0.2917
+[99/300]  Loss_D: -10.3173 Loss_G: 23.3250, Wasserstein_dist:12.9674, vae_loss_seen:306.3109 GZSL: seen=0.9231, unseen=0.0990, h=0.1788 ZSL: unseen accuracy=0.2656
+[100/300]  Loss_D: -9.0593 Loss_G: 24.8247, Wasserstein_dist:11.8302, vae_loss_seen:301.9150 GZSL: seen=0.8611, unseen=0.1146, h=0.2023 ZSL: unseen accuracy=0.2500
+[101/300]  Loss_D: -9.0005 Loss_G: 24.5350, Wasserstein_dist:11.7162, vae_loss_seen:306.8780 GZSL: seen=0.8864, unseen=0.1146, h=0.2029 ZSL: unseen accuracy=0.2760
+[102/300]  Loss_D: -10.2462 Loss_G: 23.0266, Wasserstein_dist:13.2032, vae_loss_seen:316.8890 GZSL: seen=0.8394, unseen=0.1146, h=0.2016 ZSL: unseen accuracy=0.2292
+[103/300]  Loss_D: -10.8368 Loss_G: 24.3688, Wasserstein_dist:13.2885, vae_loss_seen:299.8499 GZSL: seen=0.8708, unseen=0.1250, h=0.2186 ZSL: unseen accuracy=0.2396
+[104/300]  Loss_D: -10.5377 Loss_G: 23.9623, Wasserstein_dist:13.3086, vae_loss_seen:309.0085 GZSL: seen=0.8917, unseen=0.1042, h=0.1865 ZSL: unseen accuracy=0.1250
+[105/300]  Loss_D: -9.2984 Loss_G: 23.2451, Wasserstein_dist:11.8404, vae_loss_seen:306.0371 GZSL: seen=0.8716, unseen=0.1719, h=0.2871 ZSL: unseen accuracy=0.1458
+[106/300]  Loss_D: -9.5734 Loss_G: 23.6846, Wasserstein_dist:12.0418, vae_loss_seen:314.7259 GZSL: seen=0.9124, unseen=0.1250, h=0.2199 ZSL: unseen accuracy=0.2969
+[107/300]  Loss_D: -9.1603 Loss_G: 22.6337, Wasserstein_dist:11.9740, vae_loss_seen:299.7740 GZSL: seen=0.8866, unseen=0.1198, h=0.2111 ZSL: unseen accuracy=0.2188
+[108/300]  Loss_D: -8.8681 Loss_G: 22.2691, Wasserstein_dist:11.7612, vae_loss_seen:299.5197 GZSL: seen=0.8877, unseen=0.1198, h=0.2111 ZSL: unseen accuracy=0.1562
+[109/300]  Loss_D: -8.0508 Loss_G: 24.0018, Wasserstein_dist:11.0215, vae_loss_seen:304.8138 GZSL: seen=0.8946, unseen=0.1198, h=0.2113 ZSL: unseen accuracy=0.1510
+[110/300]  Loss_D: -8.3611 Loss_G: 21.8660, Wasserstein_dist:11.4922, vae_loss_seen:300.6992 GZSL: seen=0.9221, unseen=0.0312, h=0.0605 ZSL: unseen accuracy=0.1875
+[111/300]  Loss_D: -7.8440 Loss_G: 23.3493, Wasserstein_dist:10.3018, vae_loss_seen:295.5288 GZSL: seen=0.8351, unseen=0.1094, h=0.1934 ZSL: unseen accuracy=0.2500
+[112/300]  Loss_D: -10.2304 Loss_G: 22.4999, Wasserstein_dist:13.2994, vae_loss_seen:310.6815 GZSL: seen=0.8489, unseen=0.1250, h=0.2179 ZSL: unseen accuracy=0.1198
+[113/300]  Loss_D: -10.8179 Loss_G: 22.3107, Wasserstein_dist:13.7794, vae_loss_seen:306.1503 GZSL: seen=0.8351, unseen=0.1146, h=0.2015 ZSL: unseen accuracy=0.1250
+[114/300]  Loss_D: -11.1705 Loss_G: 22.9547, Wasserstein_dist:13.8544, vae_loss_seen:307.0843 GZSL: seen=0.8676, unseen=0.1198, h=0.2105 ZSL: unseen accuracy=0.1667
+[115/300]  Loss_D: -8.8668 Loss_G: 22.9560, Wasserstein_dist:11.7187, vae_loss_seen:305.4461 GZSL: seen=0.9601, unseen=0.0312, h=0.0605 ZSL: unseen accuracy=0.1250
+[116/300]  Loss_D: -8.8084 Loss_G: 22.8634, Wasserstein_dist:11.2134, vae_loss_seen:291.9427 GZSL: seen=0.9340, unseen=0.1042, h=0.1874 ZSL: unseen accuracy=0.2760
+[117/300]  Loss_D: -9.3698 Loss_G: 21.9217, Wasserstein_dist:12.2843, vae_loss_seen:307.2199 GZSL: seen=0.8864, unseen=0.1146, h=0.2029 ZSL: unseen accuracy=0.2604
+[118/300]  Loss_D: -8.6308 Loss_G: 22.9107, Wasserstein_dist:11.5526, vae_loss_seen:290.7852 GZSL: seen=0.8128, unseen=0.1250, h=0.2167 ZSL: unseen accuracy=0.1875
+[119/300]  Loss_D: -8.9847 Loss_G: 21.3780, Wasserstein_dist:11.8682, vae_loss_seen:302.0461 GZSL: seen=0.8696, unseen=0.1146, h=0.2025 ZSL: unseen accuracy=0.2552
+[120/300]  Loss_D: -8.8127 Loss_G: 22.8527, Wasserstein_dist:11.3352, vae_loss_seen:300.1674 GZSL: seen=0.8197, unseen=0.1146, h=0.2011 ZSL: unseen accuracy=0.1250
+[121/300]  Loss_D: -8.9548 Loss_G: 21.8456, Wasserstein_dist:11.4299, vae_loss_seen:291.1178 GZSL: seen=0.9025, unseen=0.1146, h=0.2033 ZSL: unseen accuracy=0.2760
+[122/300]  Loss_D: -9.5775 Loss_G: 21.5053, Wasserstein_dist:11.9138, vae_loss_seen:295.4293 GZSL: seen=0.8425, unseen=0.0990, h=0.1771 ZSL: unseen accuracy=0.1198
+[123/300]  Loss_D: -8.5582 Loss_G: 21.4490, Wasserstein_dist:11.7175, vae_loss_seen:299.8145 GZSL: seen=0.9184, unseen=0.0938, h=0.1701 ZSL: unseen accuracy=0.2969
+[124/300]  Loss_D: -9.1191 Loss_G: 20.6420, Wasserstein_dist:11.5407, vae_loss_seen:301.4925 GZSL: seen=0.9172, unseen=0.0885, h=0.1615 ZSL: unseen accuracy=0.1510
+[125/300]  Loss_D: -8.9404 Loss_G: 21.6924, Wasserstein_dist:11.2111, vae_loss_seen:307.2035 GZSL: seen=0.8681, unseen=0.1198, h=0.2105 ZSL: unseen accuracy=0.1198
+[126/300]  Loss_D: -8.5094 Loss_G: 21.4082, Wasserstein_dist:11.2785, vae_loss_seen:305.0770 GZSL: seen=0.8724, unseen=0.1146, h=0.2026 ZSL: unseen accuracy=0.2656
+[127/300]  Loss_D: -9.1185 Loss_G: 20.6228, Wasserstein_dist:11.6025, vae_loss_seen:304.4321 GZSL: seen=0.8357, unseen=0.1094, h=0.1934 ZSL: unseen accuracy=0.2865
+[128/300]  Loss_D: -8.8235 Loss_G: 20.1397, Wasserstein_dist:11.2994, vae_loss_seen:300.9326 GZSL: seen=0.8970, unseen=0.1094, h=0.1950 ZSL: unseen accuracy=0.1198
+[129/300]  Loss_D: -10.2343 Loss_G: 20.4449, Wasserstein_dist:12.8492, vae_loss_seen:300.4177 GZSL: seen=0.8619, unseen=0.1146, h=0.2023 ZSL: unseen accuracy=0.2760
+[130/300]  Loss_D: -9.3981 Loss_G: 21.5227, Wasserstein_dist:12.2358, vae_loss_seen:299.6950 GZSL: seen=0.8870, unseen=0.1042, h=0.1864 ZSL: unseen accuracy=0.1198
+[131/300]  Loss_D: -8.5520 Loss_G: 19.7185, Wasserstein_dist:11.4413, vae_loss_seen:303.0551 GZSL: seen=0.9541, unseen=0.0833, h=0.1533 ZSL: unseen accuracy=0.1250
+[132/300]  Loss_D: -10.4196 Loss_G: 19.8749, Wasserstein_dist:13.1393, vae_loss_seen:300.2509 GZSL: seen=0.8725, unseen=0.1146, h=0.2026 ZSL: unseen accuracy=0.1510
+[133/300]  Loss_D: -7.9249 Loss_G: 19.7448, Wasserstein_dist:10.6166, vae_loss_seen:292.3141 GZSL: seen=0.8807, unseen=0.1146, h=0.2028 ZSL: unseen accuracy=0.2865
+[134/300]  Loss_D: -8.7492 Loss_G: 20.2390, Wasserstein_dist:11.3858, vae_loss_seen:298.1636 GZSL: seen=0.8612, unseen=0.1042, h=0.1859 ZSL: unseen accuracy=0.1250
+[135/300]  Loss_D: -7.9753 Loss_G: 20.7214, Wasserstein_dist:10.2335, vae_loss_seen:301.4633 GZSL: seen=0.9241, unseen=0.0885, h=0.1616 ZSL: unseen accuracy=0.1250
+[136/300]  Loss_D: -9.6079 Loss_G: 20.6658, Wasserstein_dist:12.6672, vae_loss_seen:297.0626 GZSL: seen=0.8851, unseen=0.1042, h=0.1864 ZSL: unseen accuracy=0.1875
+[137/300]  Loss_D: -8.4815 Loss_G: 20.5085, Wasserstein_dist:11.0279, vae_loss_seen:305.6550 GZSL: seen=0.8811, unseen=0.1146, h=0.2028 ZSL: unseen accuracy=0.2865
+[138/300]  Loss_D: -8.6110 Loss_G: 19.4369, Wasserstein_dist:11.0609, vae_loss_seen:300.7648 GZSL: seen=0.9124, unseen=0.1146, h=0.2036 ZSL: unseen accuracy=0.1198
+[139/300]  Loss_D: -10.0212 Loss_G: 18.7966, Wasserstein_dist:13.1230, vae_loss_seen:288.5031 GZSL: seen=0.8976, unseen=0.1198, h=0.2114 ZSL: unseen accuracy=0.2552
+[140/300]  Loss_D: -8.1399 Loss_G: 18.6468, Wasserstein_dist:10.4152, vae_loss_seen:292.5110 GZSL: seen=0.8351, unseen=0.1094, h=0.1934 ZSL: unseen accuracy=0.3229
+[141/300]  Loss_D: -8.4527 Loss_G: 18.2855, Wasserstein_dist:10.6640, vae_loss_seen:295.6511 GZSL: seen=0.9071, unseen=0.1042, h=0.1869 ZSL: unseen accuracy=0.1250
+[142/300]  Loss_D: -7.6754 Loss_G: 18.5623, Wasserstein_dist:10.3502, vae_loss_seen:300.0357 GZSL: seen=0.8961, unseen=0.0938, h=0.1697 ZSL: unseen accuracy=0.2760
+[143/300]  Loss_D: -8.2663 Loss_G: 17.6962, Wasserstein_dist:10.8561, vae_loss_seen:295.3863 GZSL: seen=0.8845, unseen=0.1198, h=0.2110 ZSL: unseen accuracy=0.1250
+[144/300]  Loss_D: -8.1673 Loss_G: 18.5071, Wasserstein_dist:11.1628, vae_loss_seen:300.2144 GZSL: seen=0.8815, unseen=0.1146, h=0.2028 ZSL: unseen accuracy=0.2812
+[145/300]  Loss_D: -6.6977 Loss_G: 18.6133, Wasserstein_dist:8.8197, vae_loss_seen:282.9395 GZSL: seen=0.8489, unseen=0.1042, h=0.1856 ZSL: unseen accuracy=0.3125
+[146/300]  Loss_D: -8.6822 Loss_G: 19.5257, Wasserstein_dist:11.4030, vae_loss_seen:303.6098 GZSL: seen=0.8970, unseen=0.0938, h=0.1698 ZSL: unseen accuracy=0.1198
+[147/300]  Loss_D: -7.4321 Loss_G: 18.7621, Wasserstein_dist:10.1685, vae_loss_seen:298.5175 GZSL: seen=0.9303, unseen=0.0781, h=0.1441 ZSL: unseen accuracy=0.1094
+[148/300]  Loss_D: -8.9830 Loss_G: 16.9946, Wasserstein_dist:11.9440, vae_loss_seen:296.2013 GZSL: seen=0.8652, unseen=0.0990, h=0.1776 ZSL: unseen accuracy=0.1198
+[149/300]  Loss_D: -8.9133 Loss_G: 17.3946, Wasserstein_dist:11.3756, vae_loss_seen:289.4554 GZSL: seen=0.8741, unseen=0.1250, h=0.2187 ZSL: unseen accuracy=0.1094
+[150/300]  Loss_D: -7.7766 Loss_G: 17.2867, Wasserstein_dist:9.7660, vae_loss_seen:282.2859 GZSL: seen=0.8648, unseen=0.0938, h=0.1692 ZSL: unseen accuracy=0.1250
+[151/300]  Loss_D: -9.7811 Loss_G: 17.7991, Wasserstein_dist:12.7684, vae_loss_seen:289.3121 GZSL: seen=0.9029, unseen=0.1146, h=0.2034 ZSL: unseen accuracy=0.1198
+[152/300]  Loss_D: -6.3305 Loss_G: 17.3525, Wasserstein_dist:8.6737, vae_loss_seen:289.5248 GZSL: seen=0.8507, unseen=0.1094, h=0.1938 ZSL: unseen accuracy=0.2865
+[153/300]  Loss_D: -8.2411 Loss_G: 16.2555, Wasserstein_dist:10.8023, vae_loss_seen:286.0265 GZSL: seen=0.9190, unseen=0.0885, h=0.1615 ZSL: unseen accuracy=0.2917
+[154/300]  Loss_D: -9.1554 Loss_G: 16.5662, Wasserstein_dist:11.6744, vae_loss_seen:286.1609 GZSL: seen=0.8589, unseen=0.1042, h=0.1858 ZSL: unseen accuracy=0.2552
+[155/300]  Loss_D: -7.9442 Loss_G: 17.3626, Wasserstein_dist:10.2184, vae_loss_seen:292.5709 GZSL: seen=0.8913, unseen=0.0990, h=0.1781 ZSL: unseen accuracy=0.2135
+[156/300]  Loss_D: -7.8308 Loss_G: 17.1343, Wasserstein_dist:10.4303, vae_loss_seen:301.2406 GZSL: seen=0.8648, unseen=0.1042, h=0.1859 ZSL: unseen accuracy=0.1250
+[157/300]  Loss_D: -8.1301 Loss_G: 17.2377, Wasserstein_dist:10.3889, vae_loss_seen:291.1188 GZSL: seen=0.9029, unseen=0.0938, h=0.1699 ZSL: unseen accuracy=0.1667
+[158/300]  Loss_D: -8.5996 Loss_G: 15.9323, Wasserstein_dist:11.2927, vae_loss_seen:296.6316 GZSL: seen=0.8851, unseen=0.2135, h=0.3441 ZSL: unseen accuracy=0.2812
+[159/300]  Loss_D: -7.8301 Loss_G: 16.5628, Wasserstein_dist:10.0291, vae_loss_seen:278.6142 GZSL: seen=0.8323, unseen=0.0938, h=0.1685 ZSL: unseen accuracy=0.2708
+[160/300]  Loss_D: -7.5614 Loss_G: 17.2187, Wasserstein_dist:10.0968, vae_loss_seen:294.1725 GZSL: seen=0.9422, unseen=0.0625, h=0.1172 ZSL: unseen accuracy=0.2656
+[161/300]  Loss_D: -9.2348 Loss_G: 15.8670, Wasserstein_dist:11.6889, vae_loss_seen:286.4767 GZSL: seen=0.8708, unseen=0.0990, h=0.1777 ZSL: unseen accuracy=0.2812
+[162/300]  Loss_D: -7.9141 Loss_G: 15.4374, Wasserstein_dist:10.6532, vae_loss_seen:295.1569 GZSL: seen=0.9071, unseen=0.0990, h=0.1784 ZSL: unseen accuracy=0.2865
+[163/300]  Loss_D: -8.6479 Loss_G: 15.1346, Wasserstein_dist:11.5121, vae_loss_seen:298.8792 GZSL: seen=0.9009, unseen=0.1458, h=0.2510 ZSL: unseen accuracy=0.2708
+[164/300]  Loss_D: -8.1552 Loss_G: 15.7468, Wasserstein_dist:10.9439, vae_loss_seen:285.8029 GZSL: seen=0.8771, unseen=0.0990, h=0.1779 ZSL: unseen accuracy=0.1250
+[165/300]  Loss_D: -9.2255 Loss_G: 18.6091, Wasserstein_dist:13.0007, vae_loss_seen:303.2128 GZSL: seen=0.8483, unseen=0.0990, h=0.1772 ZSL: unseen accuracy=0.2604
+[166/300]  Loss_D: -7.9679 Loss_G: 15.4916, Wasserstein_dist:10.1604, vae_loss_seen:295.7382 GZSL: seen=0.9104, unseen=0.0990, h=0.1785 ZSL: unseen accuracy=0.1146
+[167/300]  Loss_D: -8.7612 Loss_G: 15.7366, Wasserstein_dist:11.2760, vae_loss_seen:296.7196 GZSL: seen=0.8925, unseen=0.0833, h=0.1524 ZSL: unseen accuracy=0.2760
+[168/300]  Loss_D: -8.0459 Loss_G: 14.8793, Wasserstein_dist:10.4540, vae_loss_seen:292.0973 GZSL: seen=0.8804, unseen=0.0990, h=0.1779 ZSL: unseen accuracy=0.2760
+[169/300]  Loss_D: -8.3952 Loss_G: 14.7834, Wasserstein_dist:10.6634, vae_loss_seen:293.1797 GZSL: seen=0.9089, unseen=0.0990, h=0.1785 ZSL: unseen accuracy=0.1458
+[170/300]  Loss_D: -6.9641 Loss_G: 14.1527, Wasserstein_dist:9.4707, vae_loss_seen:282.4941 GZSL: seen=0.8970, unseen=0.1042, h=0.1867 ZSL: unseen accuracy=0.1250
+[171/300]  Loss_D: -10.6804 Loss_G: 15.6979, Wasserstein_dist:13.9550, vae_loss_seen:300.6007 GZSL: seen=0.8765, unseen=0.0990, h=0.1778 ZSL: unseen accuracy=0.1823
+[172/300]  Loss_D: -8.6608 Loss_G: 14.9672, Wasserstein_dist:11.4062, vae_loss_seen:294.2141 GZSL: seen=0.9029, unseen=0.1198, h=0.2115 ZSL: unseen accuracy=0.2812
+[173/300]  Loss_D: -7.9068 Loss_G: 14.4539, Wasserstein_dist:10.4318, vae_loss_seen:288.2734 GZSL: seen=0.8815, unseen=0.0938, h=0.1695 ZSL: unseen accuracy=0.2760
+[174/300]  Loss_D: -8.6331 Loss_G: 16.4527, Wasserstein_dist:11.9745, vae_loss_seen:291.1620 GZSL: seen=0.8970, unseen=0.1146, h=0.2032 ZSL: unseen accuracy=0.1510
+[175/300]  Loss_D: -7.8994 Loss_G: 14.6031, Wasserstein_dist:10.1160, vae_loss_seen:300.8959 GZSL: seen=0.8976, unseen=0.1094, h=0.1950 ZSL: unseen accuracy=0.1042
+[176/300]  Loss_D: -8.4009 Loss_G: 14.7184, Wasserstein_dist:10.7248, vae_loss_seen:287.3354 GZSL: seen=0.8732, unseen=0.0990, h=0.1778 ZSL: unseen accuracy=0.1354
+[177/300]  Loss_D: -8.0243 Loss_G: 13.4274, Wasserstein_dist:10.8285, vae_loss_seen:286.1318 GZSL: seen=0.9089, unseen=0.0938, h=0.1700 ZSL: unseen accuracy=0.1302
+[178/300]  Loss_D: -6.3723 Loss_G: 14.7702, Wasserstein_dist:8.9929, vae_loss_seen:290.8381 GZSL: seen=0.8652, unseen=0.0938, h=0.1692 ZSL: unseen accuracy=0.2188
+[179/300]  Loss_D: -7.0540 Loss_G: 14.5862, Wasserstein_dist:9.5810, vae_loss_seen:306.3188 GZSL: seen=0.8747, unseen=0.0885, h=0.1608 ZSL: unseen accuracy=0.1458
+[180/300]  Loss_D: -7.4210 Loss_G: 13.0804, Wasserstein_dist:10.0974, vae_loss_seen:283.4819 GZSL: seen=0.9340, unseen=0.1510, h=0.2600 ZSL: unseen accuracy=0.2812
+[181/300]  Loss_D: -7.5693 Loss_G: 14.6977, Wasserstein_dist:9.8495, vae_loss_seen:287.4880 GZSL: seen=0.9274, unseen=0.1719, h=0.2900 ZSL: unseen accuracy=0.1615
+[182/300]  Loss_D: -6.6009 Loss_G: 13.4919, Wasserstein_dist:9.0145, vae_loss_seen:284.3827 GZSL: seen=0.9208, unseen=0.0833, h=0.1528 ZSL: unseen accuracy=0.2708
+[183/300]  Loss_D: -8.2663 Loss_G: 13.6100, Wasserstein_dist:10.7495, vae_loss_seen:292.4684 GZSL: seen=0.8970, unseen=0.0885, h=0.1612 ZSL: unseen accuracy=0.2760
+[184/300]  Loss_D: -7.6372 Loss_G: 14.7704, Wasserstein_dist:10.7922, vae_loss_seen:296.8925 GZSL: seen=0.8917, unseen=0.0833, h=0.1524 ZSL: unseen accuracy=0.2969
+[185/300]  Loss_D: -9.0276 Loss_G: 12.9848, Wasserstein_dist:11.4926, vae_loss_seen:292.2114 GZSL: seen=0.8589, unseen=0.0781, h=0.1432 ZSL: unseen accuracy=0.1146
+[186/300]  Loss_D: -8.7397 Loss_G: 13.1350, Wasserstein_dist:11.3932, vae_loss_seen:294.3527 GZSL: seen=0.8993, unseen=0.1302, h=0.2275 ZSL: unseen accuracy=0.1198
+[187/300]  Loss_D: -9.1237 Loss_G: 12.9776, Wasserstein_dist:12.0401, vae_loss_seen:300.1553 GZSL: seen=0.8815, unseen=0.0885, h=0.1609 ZSL: unseen accuracy=0.1302
+[188/300]  Loss_D: -6.6528 Loss_G: 12.5745, Wasserstein_dist:8.7241, vae_loss_seen:286.1181 GZSL: seen=0.8845, unseen=0.0885, h=0.1610 ZSL: unseen accuracy=0.1510
+[189/300]  Loss_D: -7.3597 Loss_G: 12.5359, Wasserstein_dist:9.6209, vae_loss_seen:289.9605 GZSL: seen=0.8985, unseen=0.0885, h=0.1612 ZSL: unseen accuracy=0.4010
+[190/300]  Loss_D: -7.9205 Loss_G: 11.8974, Wasserstein_dist:10.4726, vae_loss_seen:287.9182 GZSL: seen=0.8934, unseen=0.1719, h=0.2883 ZSL: unseen accuracy=0.1094
+[191/300]  Loss_D: -7.0838 Loss_G: 11.0240, Wasserstein_dist:9.7740, vae_loss_seen:288.7202 GZSL: seen=0.8968, unseen=0.0781, h=0.1437 ZSL: unseen accuracy=0.2031
+[192/300]  Loss_D: -8.8427 Loss_G: 12.2440, Wasserstein_dist:11.2758, vae_loss_seen:294.9033 GZSL: seen=0.8970, unseen=0.2344, h=0.3716 ZSL: unseen accuracy=0.1042
+[193/300]  Loss_D: -7.1150 Loss_G: 12.3677, Wasserstein_dist:9.4559, vae_loss_seen:284.9182 GZSL: seen=0.9029, unseen=0.0833, h=0.1526 ZSL: unseen accuracy=0.0938
+[194/300]  Loss_D: -7.4608 Loss_G: 13.3083, Wasserstein_dist:9.8073, vae_loss_seen:283.2071 GZSL: seen=0.9065, unseen=0.0833, h=0.1526 ZSL: unseen accuracy=0.0990
+[195/300]  Loss_D: -9.8499 Loss_G: 12.1524, Wasserstein_dist:12.4550, vae_loss_seen:292.2311 GZSL: seen=0.9481, unseen=0.0469, h=0.0893 ZSL: unseen accuracy=0.1146
+[196/300]  Loss_D: -6.7044 Loss_G: 11.2069, Wasserstein_dist:8.9095, vae_loss_seen:282.1078 GZSL: seen=0.8870, unseen=0.1094, h=0.1947 ZSL: unseen accuracy=0.1094
+[197/300]  Loss_D: -6.7591 Loss_G: 11.3198, Wasserstein_dist:9.3715, vae_loss_seen:290.1820 GZSL: seen=0.8589, unseen=0.1354, h=0.2339 ZSL: unseen accuracy=0.2604
+[198/300]  Loss_D: -6.5651 Loss_G: 11.3464, Wasserstein_dist:9.2256, vae_loss_seen:286.0826 GZSL: seen=0.9029, unseen=0.0885, h=0.1613 ZSL: unseen accuracy=0.1354
+[199/300]  Loss_D: -7.1100 Loss_G: 12.7431, Wasserstein_dist:9.6075, vae_loss_seen:292.3427 GZSL: seen=0.9045, unseen=0.0781, h=0.1438 ZSL: unseen accuracy=0.3646
+[200/300]  Loss_D: -7.5702 Loss_G: 11.0986, Wasserstein_dist:10.3836, vae_loss_seen:291.3495 GZSL: seen=0.8898, unseen=0.0833, h=0.1524 ZSL: unseen accuracy=0.1042
+[201/300]  Loss_D: -7.3358 Loss_G: 11.4113, Wasserstein_dist:9.8392, vae_loss_seen:295.4118 GZSL: seen=0.8915, unseen=0.0990, h=0.1781 ZSL: unseen accuracy=0.0990
+[202/300]  Loss_D: -6.7123 Loss_G: 10.6098, Wasserstein_dist:8.9177, vae_loss_seen:280.7885 GZSL: seen=0.8851, unseen=0.0573, h=0.1076 ZSL: unseen accuracy=0.2604
+[203/300]  Loss_D: -7.5224 Loss_G: 10.1154, Wasserstein_dist:9.8327, vae_loss_seen:276.9305 GZSL: seen=0.8970, unseen=0.1042, h=0.1867 ZSL: unseen accuracy=0.1042
+[204/300]  Loss_D: -7.6680 Loss_G: 11.0649, Wasserstein_dist:9.9284, vae_loss_seen:283.8121 GZSL: seen=0.8864, unseen=0.0729, h=0.1347 ZSL: unseen accuracy=0.3073
+[205/300]  Loss_D: -7.3010 Loss_G: 10.7880, Wasserstein_dist:9.6145, vae_loss_seen:282.5866 GZSL: seen=0.8923, unseen=0.1094, h=0.1949 ZSL: unseen accuracy=0.1250
+[206/300]  Loss_D: -5.0299 Loss_G: 10.5677, Wasserstein_dist:7.0551, vae_loss_seen:272.6060 GZSL: seen=0.8864, unseen=0.2240, h=0.3576 ZSL: unseen accuracy=0.0990
+[207/300]  Loss_D: -8.8575 Loss_G: 11.5193, Wasserstein_dist:11.0368, vae_loss_seen:285.0824 GZSL: seen=0.8708, unseen=0.0781, h=0.1434 ZSL: unseen accuracy=0.2083
+[208/300]  Loss_D: -7.1216 Loss_G: 12.9384, Wasserstein_dist:8.8245, vae_loss_seen:287.2147 GZSL: seen=0.8908, unseen=0.0677, h=0.1259 ZSL: unseen accuracy=0.1042
+[209/300]  Loss_D: -6.7434 Loss_G: 11.8620, Wasserstein_dist:9.0722, vae_loss_seen:281.6547 GZSL: seen=0.8794, unseen=0.0781, h=0.1435 ZSL: unseen accuracy=0.2188
+[210/300]  Loss_D: -7.0283 Loss_G: 11.1438, Wasserstein_dist:9.0126, vae_loss_seen:277.6965 GZSL: seen=0.8910, unseen=0.1458, h=0.2506 ZSL: unseen accuracy=0.1823
+[211/300]  Loss_D: -6.8236 Loss_G: 10.4375, Wasserstein_dist:8.6936, vae_loss_seen:284.0469 GZSL: seen=0.8845, unseen=0.0885, h=0.1610 ZSL: unseen accuracy=0.2448
+[212/300]  Loss_D: -7.6252 Loss_G: 10.2555, Wasserstein_dist:10.0192, vae_loss_seen:284.8260 GZSL: seen=0.9220, unseen=0.1250, h=0.2202 ZSL: unseen accuracy=0.2604
+[213/300]  Loss_D: -7.7762 Loss_G: 11.2909, Wasserstein_dist:10.7755, vae_loss_seen:291.8252 GZSL: seen=0.9124, unseen=0.0729, h=0.1350 ZSL: unseen accuracy=0.1042
+[214/300]  Loss_D: -6.1190 Loss_G: 11.8491, Wasserstein_dist:8.9768, vae_loss_seen:282.3984 GZSL: seen=0.8323, unseen=0.0885, h=0.1601 ZSL: unseen accuracy=0.2812
+[215/300]  Loss_D: -7.0291 Loss_G: 9.8850, Wasserstein_dist:8.7709, vae_loss_seen:278.9937 GZSL: seen=0.8970, unseen=0.0729, h=0.1349 ZSL: unseen accuracy=0.2083
+[216/300]  Loss_D: -8.5516 Loss_G: 10.4662, Wasserstein_dist:10.4321, vae_loss_seen:285.9585 GZSL: seen=0.8970, unseen=0.0885, h=0.1612 ZSL: unseen accuracy=0.2031
+[217/300]  Loss_D: -7.9220 Loss_G: 10.1204, Wasserstein_dist:10.4569, vae_loss_seen:292.1983 GZSL: seen=0.9029, unseen=0.0833, h=0.1526 ZSL: unseen accuracy=0.0938
+[218/300]  Loss_D: -6.7723 Loss_G: 10.2151, Wasserstein_dist:9.1839, vae_loss_seen:279.2722 GZSL: seen=0.8743, unseen=0.0885, h=0.1608 ZSL: unseen accuracy=0.0990
+[219/300]  Loss_D: -7.2569 Loss_G: 9.5760, Wasserstein_dist:10.0624, vae_loss_seen:286.9609 GZSL: seen=0.8769, unseen=0.1667, h=0.2801 ZSL: unseen accuracy=0.3854
+[220/300]  Loss_D: -6.4585 Loss_G: 9.4667, Wasserstein_dist:8.9819, vae_loss_seen:284.6185 GZSL: seen=0.8598, unseen=0.0885, h=0.1606 ZSL: unseen accuracy=0.0990
+[221/300]  Loss_D: -7.4635 Loss_G: 10.2838, Wasserstein_dist:9.8910, vae_loss_seen:281.1638 GZSL: seen=0.8775, unseen=0.0833, h=0.1522 ZSL: unseen accuracy=0.2812
+[222/300]  Loss_D: -6.5283 Loss_G: 10.0654, Wasserstein_dist:8.5079, vae_loss_seen:287.6631 GZSL: seen=0.9184, unseen=0.0781, h=0.1440 ZSL: unseen accuracy=0.2604
+[223/300]  Loss_D: -6.3055 Loss_G: 11.1411, Wasserstein_dist:8.5276, vae_loss_seen:286.8195 GZSL: seen=0.8985, unseen=0.1042, h=0.1867 ZSL: unseen accuracy=0.0938
+[224/300]  Loss_D: -7.6295 Loss_G: 9.6360, Wasserstein_dist:10.2568, vae_loss_seen:290.4227 GZSL: seen=0.8779, unseen=0.1250, h=0.2188 ZSL: unseen accuracy=0.1146
+[225/300]  Loss_D: -7.5608 Loss_G: 10.0096, Wasserstein_dist:10.0714, vae_loss_seen:288.2442 GZSL: seen=0.8758, unseen=0.1927, h=0.3159 ZSL: unseen accuracy=0.1354
+[226/300]  Loss_D: -7.9891 Loss_G: 9.7661, Wasserstein_dist:10.4088, vae_loss_seen:276.7963 GZSL: seen=0.9095, unseen=0.0677, h=0.1260 ZSL: unseen accuracy=0.2344
+[227/300]  Loss_D: -7.5377 Loss_G: 10.0600, Wasserstein_dist:9.7765, vae_loss_seen:278.8746 GZSL: seen=0.8976, unseen=0.2344, h=0.3717 ZSL: unseen accuracy=0.0990
+[228/300]  Loss_D: -6.2255 Loss_G: 9.7750, Wasserstein_dist:8.5903, vae_loss_seen:278.4479 GZSL: seen=0.8311, unseen=0.0938, h=0.1685 ZSL: unseen accuracy=0.2552
+[229/300]  Loss_D: -6.5092 Loss_G: 8.1354, Wasserstein_dist:8.9756, vae_loss_seen:281.9348 GZSL: seen=0.9065, unseen=0.0677, h=0.1260 ZSL: unseen accuracy=0.2500
+[230/300]  Loss_D: -6.4381 Loss_G: 9.0337, Wasserstein_dist:8.6346, vae_loss_seen:287.6986 GZSL: seen=0.8364, unseen=0.0885, h=0.1601 ZSL: unseen accuracy=0.0938
+[231/300]  Loss_D: -8.1050 Loss_G: 7.8721, Wasserstein_dist:10.5602, vae_loss_seen:284.8482 GZSL: seen=0.9071, unseen=0.0781, h=0.1439 ZSL: unseen accuracy=0.0990
+[232/300]  Loss_D: -8.6793 Loss_G: 9.3803, Wasserstein_dist:11.0221, vae_loss_seen:291.9171 GZSL: seen=0.8743, unseen=0.0781, h=0.1434 ZSL: unseen accuracy=0.1406
+[233/300]  Loss_D: -8.1926 Loss_G: 8.5664, Wasserstein_dist:10.7457, vae_loss_seen:292.5717 GZSL: seen=0.9053, unseen=0.1354, h=0.2356 ZSL: unseen accuracy=0.3490
+[234/300]  Loss_D: -6.1586 Loss_G: 8.8405, Wasserstein_dist:8.2252, vae_loss_seen:283.0532 GZSL: seen=0.8784, unseen=0.1146, h=0.2027 ZSL: unseen accuracy=0.1354
+[235/300]  Loss_D: -8.5958 Loss_G: 7.6455, Wasserstein_dist:11.3353, vae_loss_seen:289.1563 GZSL: seen=0.8648, unseen=0.1042, h=0.1859 ZSL: unseen accuracy=0.1406
+[236/300]  Loss_D: -6.9153 Loss_G: 8.2049, Wasserstein_dist:9.2453, vae_loss_seen:283.0160 GZSL: seen=0.8362, unseen=0.1198, h=0.2096 ZSL: unseen accuracy=0.3594
+[237/300]  Loss_D: -6.9863 Loss_G: 8.9054, Wasserstein_dist:9.0592, vae_loss_seen:278.2007 GZSL: seen=0.9005, unseen=0.0781, h=0.1438 ZSL: unseen accuracy=0.3958
+[238/300]  Loss_D: -8.0811 Loss_G: 8.1476, Wasserstein_dist:10.2857, vae_loss_seen:283.4264 GZSL: seen=0.8775, unseen=0.2188, h=0.3502 ZSL: unseen accuracy=0.1094
+[239/300]  Loss_D: -8.5185 Loss_G: 8.5040, Wasserstein_dist:11.1185, vae_loss_seen:275.0371 GZSL: seen=0.8845, unseen=0.1667, h=0.2805 ZSL: unseen accuracy=0.2396
+[240/300]  Loss_D: -8.0715 Loss_G: 7.3151, Wasserstein_dist:10.5202, vae_loss_seen:279.7299 GZSL: seen=0.8692, unseen=0.0677, h=0.1256 ZSL: unseen accuracy=0.1979
+[241/300]  Loss_D: -7.6485 Loss_G: 7.6715, Wasserstein_dist:10.9109, vae_loss_seen:296.9405 GZSL: seen=0.8970, unseen=0.1094, h=0.1950 ZSL: unseen accuracy=0.1042
+[242/300]  Loss_D: -6.7778 Loss_G: 7.6054, Wasserstein_dist:8.8447, vae_loss_seen:276.6989 GZSL: seen=0.9029, unseen=0.2240, h=0.3589 ZSL: unseen accuracy=0.2031
+[243/300]  Loss_D: -7.4440 Loss_G: 6.8647, Wasserstein_dist:9.5916, vae_loss_seen:286.6117 GZSL: seen=0.9065, unseen=0.2135, h=0.3457 ZSL: unseen accuracy=0.0938
+[244/300]  Loss_D: -7.7539 Loss_G: 8.3586, Wasserstein_dist:10.7065, vae_loss_seen:290.0901 GZSL: seen=0.8970, unseen=0.1250, h=0.2194 ZSL: unseen accuracy=0.1198
+[245/300]  Loss_D: -8.4665 Loss_G: 6.7818, Wasserstein_dist:10.7321, vae_loss_seen:276.8452 GZSL: seen=0.9243, unseen=0.0156, h=0.0307 ZSL: unseen accuracy=0.2604
+[246/300]  Loss_D: -8.2155 Loss_G: 7.0599, Wasserstein_dist:10.7083, vae_loss_seen:279.7343 GZSL: seen=0.8917, unseen=0.1979, h=0.3239 ZSL: unseen accuracy=0.2344
+[247/300]  Loss_D: -6.4242 Loss_G: 6.5876, Wasserstein_dist:8.3813, vae_loss_seen:273.7459 GZSL: seen=0.8993, unseen=0.0885, h=0.1612 ZSL: unseen accuracy=0.1562
+[248/300]  Loss_D: -6.3053 Loss_G: 7.4814, Wasserstein_dist:8.5329, vae_loss_seen:269.5372 GZSL: seen=0.9065, unseen=0.0938, h=0.1699 ZSL: unseen accuracy=0.2552
+[249/300]  Loss_D: -7.4859 Loss_G: 8.2201, Wasserstein_dist:9.6413, vae_loss_seen:286.2847 GZSL: seen=0.8970, unseen=0.0729, h=0.1349 ZSL: unseen accuracy=0.2760
+[250/300]  Loss_D: -7.6071 Loss_G: 9.3811, Wasserstein_dist:9.9614, vae_loss_seen:285.5948 GZSL: seen=0.9029, unseen=0.0833, h=0.1526 ZSL: unseen accuracy=0.2031
+[251/300]  Loss_D: -5.9388 Loss_G: 9.5672, Wasserstein_dist:7.9807, vae_loss_seen:285.2278 GZSL: seen=0.8670, unseen=0.0781, h=0.1433 ZSL: unseen accuracy=0.1198
+[252/300]  Loss_D: -7.0794 Loss_G: 8.6414, Wasserstein_dist:9.0824, vae_loss_seen:286.3008 GZSL: seen=0.8533, unseen=0.2240, h=0.3548 ZSL: unseen accuracy=0.2552
+[253/300]  Loss_D: -6.2194 Loss_G: 6.8055, Wasserstein_dist:8.3141, vae_loss_seen:279.0842 GZSL: seen=0.8595, unseen=0.0729, h=0.1344 ZSL: unseen accuracy=0.0990
+[254/300]  Loss_D: -8.1442 Loss_G: 9.4292, Wasserstein_dist:11.4268, vae_loss_seen:288.9837 GZSL: seen=0.8970, unseen=0.0781, h=0.1437 ZSL: unseen accuracy=0.0885
+[255/300]  Loss_D: -7.0103 Loss_G: 7.4629, Wasserstein_dist:8.9593, vae_loss_seen:276.4359 GZSL: seen=0.8698, unseen=0.2292, h=0.3628 ZSL: unseen accuracy=0.2448
+[256/300]  Loss_D: -7.3216 Loss_G: 8.4170, Wasserstein_dist:10.0427, vae_loss_seen:287.7620 GZSL: seen=0.9065, unseen=0.0833, h=0.1526 ZSL: unseen accuracy=0.2240
+[257/300]  Loss_D: -6.8777 Loss_G: 7.5263, Wasserstein_dist:9.4650, vae_loss_seen:282.9100 GZSL: seen=0.8910, unseen=0.1198, h=0.2112 ZSL: unseen accuracy=0.0938
+[258/300]  Loss_D: -7.0084 Loss_G: 8.0400, Wasserstein_dist:9.1342, vae_loss_seen:284.1731 GZSL: seen=0.8476, unseen=0.0729, h=0.1343 ZSL: unseen accuracy=0.1354
+[259/300]  Loss_D: -6.2384 Loss_G: 6.7502, Wasserstein_dist:8.1082, vae_loss_seen:279.6444 GZSL: seen=0.8589, unseen=0.1927, h=0.3148 ZSL: unseen accuracy=0.1406
+[260/300]  Loss_D: -7.6129 Loss_G: 5.6925, Wasserstein_dist:9.7144, vae_loss_seen:275.5441 GZSL: seen=0.9124, unseen=0.0625, h=0.1170 ZSL: unseen accuracy=0.3646
+[261/300]  Loss_D: -5.8701 Loss_G: 6.1862, Wasserstein_dist:7.9405, vae_loss_seen:275.9323 GZSL: seen=0.8970, unseen=0.1042, h=0.1867 ZSL: unseen accuracy=0.1146
+[262/300]  Loss_D: -8.2308 Loss_G: 7.5416, Wasserstein_dist:11.4538, vae_loss_seen:288.4409 GZSL: seen=0.9065, unseen=0.0781, h=0.1439 ZSL: unseen accuracy=0.2656
+[263/300]  Loss_D: -6.6749 Loss_G: 7.2130, Wasserstein_dist:8.4808, vae_loss_seen:283.6197 GZSL: seen=0.9029, unseen=0.1875, h=0.3105 ZSL: unseen accuracy=0.1302
+[264/300]  Loss_D: -6.7036 Loss_G: 7.7376, Wasserstein_dist:8.6612, vae_loss_seen:272.1553 GZSL: seen=0.8902, unseen=0.0781, h=0.1436 ZSL: unseen accuracy=0.0938
+[265/300]  Loss_D: -7.0947 Loss_G: 6.8222, Wasserstein_dist:8.9041, vae_loss_seen:277.8875 GZSL: seen=0.9044, unseen=0.1510, h=0.2589 ZSL: unseen accuracy=0.2552
+[266/300]  Loss_D: -7.8706 Loss_G: 6.1278, Wasserstein_dist:10.2565, vae_loss_seen:282.4299 GZSL: seen=0.8983, unseen=0.1458, h=0.2509 ZSL: unseen accuracy=0.0990
+[267/300]  Loss_D: -7.0500 Loss_G: 6.3554, Wasserstein_dist:9.9100, vae_loss_seen:288.0416 GZSL: seen=0.8930, unseen=0.1302, h=0.2273 ZSL: unseen accuracy=0.1302
+[268/300]  Loss_D: -9.0881 Loss_G: 5.5818, Wasserstein_dist:12.0844, vae_loss_seen:289.7314 GZSL: seen=0.8857, unseen=0.1979, h=0.3235 ZSL: unseen accuracy=0.2708
+[269/300]  Loss_D: -6.2733 Loss_G: 5.6213, Wasserstein_dist:8.3799, vae_loss_seen:278.4341 GZSL: seen=0.8791, unseen=0.1927, h=0.3161 ZSL: unseen accuracy=0.1823
+[270/300]  Loss_D: -6.2499 Loss_G: 6.0996, Wasserstein_dist:8.6020, vae_loss_seen:293.9668 GZSL: seen=0.9089, unseen=0.1042, h=0.1869 ZSL: unseen accuracy=0.2969
+[271/300]  Loss_D: -8.6207 Loss_G: 5.0808, Wasserstein_dist:10.7509, vae_loss_seen:278.8364 GZSL: seen=0.9045, unseen=0.0677, h=0.1260 ZSL: unseen accuracy=0.2292
+[272/300]  Loss_D: -7.4910 Loss_G: 6.2787, Wasserstein_dist:9.6753, vae_loss_seen:284.8287 GZSL: seen=0.8970, unseen=0.0990, h=0.1783 ZSL: unseen accuracy=0.2604
+[273/300]  Loss_D: -6.1459 Loss_G: 6.4308, Wasserstein_dist:7.9353, vae_loss_seen:282.6292 GZSL: seen=0.8497, unseen=0.2292, h=0.3610 ZSL: unseen accuracy=0.2760
+[274/300]  Loss_D: -7.7358 Loss_G: 4.9035, Wasserstein_dist:9.8469, vae_loss_seen:275.3419 GZSL: seen=0.9124, unseen=0.0625, h=0.1170 ZSL: unseen accuracy=0.1094
+[275/300]  Loss_D: -7.3612 Loss_G: 5.1678, Wasserstein_dist:9.4059, vae_loss_seen:272.2342 GZSL: seen=0.8970, unseen=0.0729, h=0.1349 ZSL: unseen accuracy=0.2500
+[276/300]  Loss_D: -8.3356 Loss_G: 5.8237, Wasserstein_dist:10.8561, vae_loss_seen:281.7182 GZSL: seen=0.9184, unseen=0.0677, h=0.1261 ZSL: unseen accuracy=0.2188
+[277/300]  Loss_D: -7.7937 Loss_G: 6.1052, Wasserstein_dist:9.8840, vae_loss_seen:287.1744 GZSL: seen=0.8898, unseen=0.0729, h=0.1348 ZSL: unseen accuracy=0.2396
+[278/300]  Loss_D: -8.5314 Loss_G: 5.4264, Wasserstein_dist:10.9116, vae_loss_seen:287.1098 GZSL: seen=0.8483, unseen=0.0938, h=0.1688 ZSL: unseen accuracy=0.2604
+[279/300]  Loss_D: -6.8547 Loss_G: 4.9059, Wasserstein_dist:9.3980, vae_loss_seen:283.0383 GZSL: seen=0.8959, unseen=0.0677, h=0.1259 ZSL: unseen accuracy=0.2552
+[280/300]  Loss_D: -8.4381 Loss_G: 5.6163, Wasserstein_dist:10.7564, vae_loss_seen:284.3892 GZSL: seen=0.9029, unseen=0.0729, h=0.1349 ZSL: unseen accuracy=0.0990
+[281/300]  Loss_D: -6.9560 Loss_G: 4.9761, Wasserstein_dist:8.6767, vae_loss_seen:274.9936 GZSL: seen=0.9005, unseen=0.0729, h=0.1349 ZSL: unseen accuracy=0.1094
+[282/300]  Loss_D: -7.5763 Loss_G: 5.5608, Wasserstein_dist:9.6012, vae_loss_seen:280.1368 GZSL: seen=0.8658, unseen=0.0781, h=0.1433 ZSL: unseen accuracy=0.1979
+[283/300]  Loss_D: -5.9235 Loss_G: 5.2720, Wasserstein_dist:8.0824, vae_loss_seen:282.9277 GZSL: seen=0.8751, unseen=0.1927, h=0.3159 ZSL: unseen accuracy=0.2292
+[284/300]  Loss_D: -6.5039 Loss_G: 5.3036, Wasserstein_dist:9.0535, vae_loss_seen:262.8796 GZSL: seen=0.8944, unseen=0.0729, h=0.1348 ZSL: unseen accuracy=0.2448
+[285/300]  Loss_D: -6.2622 Loss_G: 5.8585, Wasserstein_dist:8.3553, vae_loss_seen:277.9893 GZSL: seen=0.8462, unseen=0.0833, h=0.1517 ZSL: unseen accuracy=0.2500
+[286/300]  Loss_D: -6.5923 Loss_G: 6.7644, Wasserstein_dist:8.9766, vae_loss_seen:284.5243 GZSL: seen=0.8529, unseen=0.0990, h=0.1773 ZSL: unseen accuracy=0.2240
+[287/300]  Loss_D: -5.0015 Loss_G: 7.3883, Wasserstein_dist:7.9937, vae_loss_seen:285.2716 GZSL: seen=0.8828, unseen=0.1406, h=0.2426 ZSL: unseen accuracy=0.1771
+[288/300]  Loss_D: -6.4543 Loss_G: 5.0044, Wasserstein_dist:8.1000, vae_loss_seen:272.7281 GZSL: seen=0.9029, unseen=0.0938, h=0.1699 ZSL: unseen accuracy=0.1354
+[289/300]  Loss_D: -7.1542 Loss_G: 5.1952, Wasserstein_dist:9.6506, vae_loss_seen:285.2890 GZSL: seen=0.8934, unseen=0.1667, h=0.2809 ZSL: unseen accuracy=0.2240
+[290/300]  Loss_D: -6.3831 Loss_G: 5.7433, Wasserstein_dist:8.5925, vae_loss_seen:286.4679 GZSL: seen=0.9029, unseen=0.0833, h=0.1526 ZSL: unseen accuracy=0.2292
+[291/300]  Loss_D: -7.8181 Loss_G: 5.2422, Wasserstein_dist:10.3111, vae_loss_seen:280.4726 GZSL: seen=0.8910, unseen=0.0729, h=0.1348 ZSL: unseen accuracy=0.2188
+[292/300]  Loss_D: -7.0662 Loss_G: 5.3428, Wasserstein_dist:9.2034, vae_loss_seen:285.5055 GZSL: seen=0.9029, unseen=0.1302, h=0.2276 ZSL: unseen accuracy=0.2552
+[293/300]  Loss_D: -6.5229 Loss_G: 4.1377, Wasserstein_dist:8.4409, vae_loss_seen:279.3788 GZSL: seen=0.8985, unseen=0.0833, h=0.1525 ZSL: unseen accuracy=0.2500
+[294/300]  Loss_D: -6.6377 Loss_G: 5.0435, Wasserstein_dist:8.8116, vae_loss_seen:274.8700 GZSL: seen=0.8908, unseen=0.0781, h=0.1437 ZSL: unseen accuracy=0.1719
+[295/300]  Loss_D: -6.6912 Loss_G: 4.6219, Wasserstein_dist:8.3947, vae_loss_seen:274.6942 GZSL: seen=0.8976, unseen=0.0833, h=0.1525 ZSL: unseen accuracy=0.1875
+[296/300]  Loss_D: -7.0788 Loss_G: 5.4856, Wasserstein_dist:9.4173, vae_loss_seen:277.0090 GZSL: seen=0.8791, unseen=0.1510, h=0.2578 ZSL: unseen accuracy=0.2604
+[297/300]  Loss_D: -6.0457 Loss_G: 4.0100, Wasserstein_dist:8.2756, vae_loss_seen:280.2730 GZSL: seen=0.8917, unseen=0.1927, h=0.3169 ZSL: unseen accuracy=0.0938
+[298/300]  Loss_D: -6.3938 Loss_G: 4.0680, Wasserstein_dist:8.4068, vae_loss_seen:272.7948 GZSL: seen=0.8851, unseen=0.0729, h=0.1347 ZSL: unseen accuracy=0.2604
+[299/300]  Loss_D: -6.4990 Loss_G: 5.0385, Wasserstein_dist:8.8541, vae_loss_seen:271.5629 GZSL: seen=0.8815, unseen=0.0833, h=0.1523 ZSL: unseen accuracy=0.1302
+Dataset RADAR
+the best ZSL unseen accuracy is 0.625
+Dataset RADAR
+the best GZSL seen accuracy is 0.8976190476190476
+the best GZSL unseen accuracy is 0.234375
+the best GZSL H is 0.37169712107269626
